@@ -16,7 +16,7 @@ import com.online.store.demo.model.Catalogue;
 
 @Component
 public class CatalogueRepoCLR implements CommandLineRunner {
-
+	
 	private CatalogueRepository catalogueRepository;
 
 	@Autowired
@@ -34,7 +34,6 @@ public class CatalogueRepoCLR implements CommandLineRunner {
 		catalogueRepository.save(new Catalogue("Refrigrator", 600.00));
 		catalogueRepository.save(new Catalogue("Television", 900.50));
 		
-		System.out.println("***************** CATALOGUE SERVICE :: http://127.0.0.1:8010 ");
 		catalogueRepository.findAll().forEach(System.out::println);
 	}
 }
