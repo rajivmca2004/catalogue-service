@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: catalogue-service
-  namespace: default
+  namespace: onlinestore-demo
 spec:
   ports:
   - port: 8010
@@ -20,6 +20,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalogue-service-app-deployment
+  namespace: onlinestore-demo
 spec:
   selector:
     matchLabels:
@@ -32,7 +33,7 @@ spec:
     spec:
       containers:
       - name: catalogue-service-app
-        image: harbor.tanzu.cloudification.in/library/catalogue-service-app-demo
+        image: itsrajivsrivastava/catalogue-service
         ports:
         - containerPort: 8010
           name: server
