@@ -6,19 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 /**
  * @author rasrivastava
  *
  */
 @SuppressWarnings("unused")
 @Entity
-@Data
-@EqualsAndHashCode (exclude = "id")
-@ToString
 public class Catalogue {
 	
 	@Id
@@ -40,6 +33,29 @@ public class Catalogue {
         this.price = price;
     }
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
 	@Override
 	public String toString() {
 		return "Catalogue [id=" + id + ", name=" + name + ", price=" + price + "]";
