@@ -10,7 +10,6 @@ import javax.persistence.Id;
  * @author rasrivastava
  *
  */
-@SuppressWarnings("unused")
 @Entity
 public class Catalogue {
 	
