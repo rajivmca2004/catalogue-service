@@ -4,6 +4,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+logging:
+  file:
+    name: /Users/rasrivastava/spring-logging/application-backend-dev.log
+  level:
+    org.springframework: ERROR
+    com.online.store.demo: INFO
 management:
   endpoint:
     health:
@@ -23,3 +29,4 @@ springdoc:
     path: /docs
   swagger-ui:
     path: /swagger
+    

@@ -29,3 +29,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/application-backend-dev.log.2021-02-02.0.gz
+/application-backend-dev.log
