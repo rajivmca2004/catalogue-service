@@ -22,7 +22,8 @@
 		<java.version>1.8</java.version>
 		<wavefront.version>2.0.0-RC1</wavefront.version>
 		<docker.image.prefix>itsrajivsrivastava</docker.image.prefix>
-		
+		<sleuth.version>2.2.6.RELEASE</sleuth.version>
+		<openapi.version>1.2.32</openapi.version>
 	</properties>
 
 	<dependencies>
@@ -30,10 +31,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.wavefront</groupId> -->
-<!-- 			<artifactId>wavefront-spring-boot-starter</artifactId> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>com.wavefront</groupId>
+			<artifactId>wavefront-spring-boot-starter</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>io.micrometer</groupId>
@@ -60,13 +61,20 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.2.32</version>
+			<version>${openapi.version}</version>
 		</dependency>
 		<!-- hot swapping, disable cache for template, enable live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<!-- Sleuth log tracing -->
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+			<version>${sleuth.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
